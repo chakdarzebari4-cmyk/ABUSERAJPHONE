@@ -3,123 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seraj Tech - متجر الهواتف المضمون</title>
-    <!-- مكتبة التصميم لضمان التوافق مع الهواتف -->
+    <title>ABU SERAJ PHONE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- السكربت الرسمي لشبكة Pi Network SDK -->
     <script src="https://sdk.minepi.com/pi-sdk.js"></script>
-    
     <style>
-        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; font-family: sans-serif; }
         .navbar { background-color: #1a1a1a; }
         .guarantee-box { background-color: #eef9f5; border: 1px solid #c3e6cb; border-radius: 15px; padding: 15px; margin-bottom: 25px; text-align: right; }
-        .product-card { border-radius: 20px; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 25px; background: #fff; overflow: hidden; }
-        .product-img { height: 220px; object-fit: contain; padding: 20px; background: #fafafa; }
-        .price-badge { background-color: #ffc107; color: #000; font-weight: bold; padding: 6px 18px; border-radius: 20px; display: inline-block; }
-        .btn-buy { background-color: #28a745; color: white; border-radius: 25px; width: 100%; font-weight: bold; border: none; padding: 10px; }
-        .btn-buy:hover { background-color: #218838; color: white; }
-        .user-info { color: #fff; font-size: 0.9rem; }
-        .guarantee-title { color: #155724; font-weight: bold; font-size: 1.1rem; }
+        .product-card { border-radius: 20px; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 25px; background: #fff; }
+        .product-img { height: 200px; object-fit: contain; padding: 15px; }
+        .btn-buy { background-color: #28a745; color: white; border-radius: 25px; width: 100%; border: none; padding: 10px; }
     </style>
 </head>
 <body>
 
-    <!-- شريط التنقل العلوي -->
-    <nav class="navbar navbar-dark mb-4 shadow-sm">
-        <div class="container d-flex justify-content-between align-items-center">
-            <span class="navbar-brand h1 mb-0">📱 Seraj Tech للاتصالات</span>
-            <span id="username" class="user-info text-muted">جاري الاتصال بـ Pi...</span>
+    <nav class="navbar navbar-dark mb-4">
+        <div class="container justify-content-center">
+            <span class="navbar-brand h1">📱 ABU SERAJ PHONE</span>
         </div>
     </nav>
 
     <div class="container">
-        
-        <!-- قسم بنود الضمان لحماية الطرفين -->
+        <!-- صندوق الضمان باللغات الثلاث -->
         <div class="guarantee-box shadow-sm">
-            <div class="guarantee-title mb-2">🛡️ نظام ضمان البيع والشراء الآمن (Escrow):</div>
-            <ul class="margin-bottom-0 small text-dark" style="padding-right: 20px;">
-                <li><strong>حماية المشتري:</strong> لا يتم تحرير الـ Pi نهائياً للبائع إلا بعد استلامك للهاتف ومعاينته والتأكد من مطابقتة للمواصفات خلال 48 ساعة.</li>
-                <li><strong>حماية البائع:</strong> يلتزم المشتري بتأكيد الدفع مسبقاً وتجميده في عقد الشبكة قبل البدء في شحن وتجهيز الطلب لضمان جدية الشراء.</li>
-                <li><strong>الدعم وحل النزاعات:</strong> في حال وجود أي مشكلة في الشحن أو الجهاز، يمكنك فتح تذكرة دعم لاسترجاع عملاتك بالكامل.</li>
-            </ul>
+            <h6 class="fw-bold">🛡️ ضماننا / Our Guarantee / مسۆگەری ئێمە:</h6>
+            <p class="small text-muted">
+                (AR) حماية المشتري والبائع مضمونة عبر نظام Escrow.<br>
+                (EN) Buyer & Seller protection guaranteed via Escrow system.<br>
+                (KU) پاراستنی کڕیار و فرۆشیار بە سیستمى Escrow مسۆگەرە.
+            </p>
         </div>
 
-        <div class="text-center mb-4">
-            <h3 class="fw-bold">الأجهزة المتاحة للطلب الآن</h3>
-            <p class="text-muted">اضغط على الجهاز لبدء عملية الشراء المؤمنة</p>
-        </div>
-
-        <!-- قسم عرض الهواتف -->
         <div class="row">
-            
-            <!-- الهاتف الأول -->
-            <div class="col-6 col-md-4">
+            <!-- مثال لهاتف (يمكنك تكرار هذا الجزء لأي هاتف جديد) -->
+            <div class="col-6">
                 <div class="card product-card">
-                    <img src="images/iphone15.jpg" class="card-img-top product-img" alt="iPhone 15 Pro">
                     <div class="card-body text-center">
-                        <h6 class="fw-bold mb-1">iPhone 15 Pro</h6>
-                        <p class="small text-muted mb-2">ذاكرة 256GB | تيتانيوم الأصلي</p>
-                        <div class="price-badge mb-3">𝝅 450 Pi</div>
-                        <button class="btn btn-buy" onclick="createPiPayment('iPhone 15 Pro', 450)">شراء وضمان استلام</button>
+                        <h6 class="fw-bold">iPhone 15 Pro</h6>
+                        <p class="small">256GB | تيتانيوم</p>
+                        <div class="h5">𝝅 450 Pi</div>
+                        <button class="btn btn-buy" onclick="createPiPayment('iPhone 15 Pro', 450)">
+                            شراء | Buy | کڕین
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- الهاتف الثاني -->
-            <div class="col-6 col-md-4">
+            <div class="col-6">
                 <div class="card product-card">
-                    <img src="images/samsung.jpg" class="card-img-top product-img" alt="Samsung S24 Ultra">
                     <div class="card-body text-center">
-                        <h6 class="fw-bold mb-1">Samsung S24 Ultra</h6>
-                        <p class="small text-muted mb-2">ذاكرة 512GB | أسود ملكي</p>
-                        <div class="price-badge mb-3">𝝅 400 Pi</div>
-                        <button class="btn btn-buy" onclick="createPiPayment('Samsung S24 Ultra', 400)">شراء وضمان استلام</button>
+                        <h6 class="fw-bold">Samsung S24 Ultra</h6>
+                        <p class="small">512GB | تيتانيوم</p>
+                        <div class="h5">𝝅 400 Pi</div>
+                        <button class="btn btn-buy" onclick="createPiPayment('Samsung S24 Ultra', 400)">
+                            شراء | Buy | کڕین
+                        </button>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- كود البرمجة الخاص بربط بوابة دفع Pi Network والتأكيد -->
     <script>
         const Pi = window.Pi;
-        Pi.init({ version: "2.0", sandbox: true }); 
-
-        Pi.authenticate(["username", "payments"], onIncompletePaymentFound)
-        .then(function(auth) {
-            document.getElementById("username").innerText = "مرحباً: " + auth.user.username;
-        }).catch(function(error) {
-            console.error("فشل تسجيل الدخول:", error);
-            document.getElementById("username").innerText = "يرجى الفتح من متصفح Pi";
-        });
+        Pi.init({ version: "2.0", sandbox: true });
 
         function createPiPayment(itemName, itemPrice) {
             Pi.createPayment({
                 amount: itemPrice,
-                memo: "شراء مضمون لجهاز " + itemName + " - متجر Seraj Tech",
-                metadata: { productId: itemName, security: "Escrow_Enabled" },
+                memo: "شراء/Buy/کڕین: " + itemName,
             }, {
                 onReadyForServerApproval: function(paymentId) {
-                    console.log("تم حجز المبلغ مؤقتاً في الشبكة للضمان: ", paymentId);
-                    alert("🛡️ تم قفل مبلغ " + itemPrice + " Pi في شبكة الأمان. يرجى المتابعة وتأكيد العملية لشحن الهاتف.");
+                    alert("🛡️ تم تجميد المبلغ للضمان / Payment Escrowed / پارەکە لە سیستمەکە گیراوە");
                 },
                 onReadyForServerCompletion: function(paymentId, txid) {
-                    console.log("اكتمل الدفع: ", txid);
-                    alert("🎉 رائع! تم تأكيد عمليتك المضمونة برقم تتبع المعاملة: " + txid + ".\nسيقوم فريقنا بالتواصل لشحن الهاتف فوراً.");
-                },
-                onCancel: function(paymentId) {
-                    alert("تم إلغاء طلب الشراء المضمون.");
-                },
-                onError: function(error, payment) {
-                    console.error("خطأ في العملية:", error);
+                    alert("🎉 تم الدفع بنجاح / Paid Successfully / بە سەرکەوتوویی کڕدرا");
                 }
             });
-        }
-
-        function onIncompletePaymentFound(payment) {
-            console.log("وجد معالجة معلقة:", payment);
         }
     </script>
 </body>
