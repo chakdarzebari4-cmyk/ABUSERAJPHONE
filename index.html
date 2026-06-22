@@ -11,8 +11,9 @@
         .navbar { background-color: #1a1a1a; }
         .guarantee-box { background-color: #eef9f5; border: 1px solid #c3e6cb; border-radius: 15px; padding: 15px; margin-bottom: 25px; text-align: right; }
         .product-card { border-radius: 20px; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 25px; background: #fff; }
-        .product-img { height: 200px; object-fit: contain; padding: 15px; }
-        .btn-buy { background-color: #28a745; color: white; border-radius: 25px; width: 100%; border: none; padding: 10px; }
+        .product-img { height: 180px; object-fit: contain; padding: 10px; }
+        .btn-buy { background-color: #28a745; color: white; border-radius: 25px; width: 100%; border: none; padding: 10px; font-weight: bold; }
+        .text-ku { color: #555; font-size: 0.85rem; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -24,40 +25,44 @@
     </nav>
 
     <div class="container">
-        <!-- صندوق الضمان باللغات الثلاث -->
         <div class="guarantee-box shadow-sm">
-            <h6 class="fw-bold">🛡️ ضماننا / Our Guarantee / مسۆگەری ئێمە:</h6>
-            <p class="small text-muted">
-                (AR) حماية المشتري والبائع مضمونة عبر نظام Escrow.<br>
-                (EN) Buyer & Seller protection guaranteed via Escrow system.<br>
-                (KU) پاراستنی کڕیار و فرۆشیار بە سیستمى Escrow مسۆگەرە.
-            </p>
+            <h6 class="fw-bold mb-3">🛡️ نظام ضمان البيع والشراء الآمن (Escrow):</h6>
+            <ul class="small text-dark">
+                <li><strong>حماية المشتري:</strong> لا يتم تحرير الـ Pi نهائياً للبائع إلا بعد استلامك للهاتف ومعاينته والتأكد من مطابقتة للمواصفات خلال 48 ساعة.
+                    <div class="text-ku">پاراستنی کڕیار: پی ناکرێتە پارەی فرۆشیار تا ئەو کاتەی مۆبایلەکەت وەردەگریت و پشکنینی بۆ دەکەیت لە ماوەی ٤٨ کاتژمێردا.</div>
+                </li>
+                <li class="mt-2"><strong>حماية البائع:</strong> يلتزم المشتري بتأكيد الدفع مسبقاً وتجميده في عقد الشبكة قبل البدء في شحن وتجهيز الطلب لضمان جدية الشراء.
+                    <div class="text-ku">پاراستنی فرۆشیار: کڕیار پابەندە بە پشتڕاستکردنەوەی پارەدان بە پێشوەختە بۆ دڵنیابوون لە جدیەتی کڕین.</div>
+                </li>
+                <li class="mt-2"><strong>الدعم وحل النزاعات:</strong> في حال وجود أي مشكلة في الشحن أو الجهاز، يمكنك فتح تذكرة دعم لاسترجاع عملاتك بالكامل.
+                    <div class="text-ku">پشتیوانی: لە ئەگەری هەر کێشەیەک لە گەیاندن یان مۆبایلەکە، دەتوانیت سکاڵا تۆمار بکەیت بۆ وەرگرتنەوەی تەواوی پارەکەت.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text-center mb-4">
+            <h5>الأجهزة المتاحة للطلب الآن</h5>
+            <small>اضغط على الجهاز لبدء عملية الشراء المؤمنة</small>
         </div>
 
         <div class="row">
-            <!-- مثال لهاتف (يمكنك تكرار هذا الجزء لأي هاتف جديد) -->
-            <div class="col-6">
-                <div class="card product-card">
-                    <div class="card-body text-center">
-                        <h6 class="fw-bold">iPhone 15 Pro</h6>
-                        <p class="small">256GB | تيتانيوم</p>
-                        <div class="h5">𝝅 450 Pi</div>
-                        <button class="btn btn-buy" onclick="createPiPayment('iPhone 15 Pro', 450)">
-                            شراء | Buy | کڕین
-                        </button>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-6">
                 <div class="card product-card">
                     <div class="card-body text-center">
                         <h6 class="fw-bold">Samsung S24 Ultra</h6>
-                        <p class="small">512GB | تيتانيوم</p>
-                        <div class="h5">𝝅 400 Pi</div>
-                        <button class="btn btn-buy" onclick="createPiPayment('Samsung S24 Ultra', 400)">
-                            شراء | Buy | کڕین
-                        </button>
+                        <p class="small text-muted">ذاكرة 512GB</p>
+                        <div class="h5 fw-bold mb-3">𝝅 400 Pi</div>
+                        <button class="btn btn-buy" onclick="createPiPayment('Samsung S24 Ultra', 400)">شراء وضمان استلام</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card product-card">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">iPhone 15 Pro</h6>
+                        <p class="small text-muted">ذاكرة 256GB</p>
+                        <div class="h5 fw-bold mb-3">𝝅 450 Pi</div>
+                        <button class="btn btn-buy" onclick="createPiPayment('iPhone 15 Pro', 450)">شراء وضمان استلام</button>
                     </div>
                 </div>
             </div>
@@ -71,14 +76,10 @@
         function createPiPayment(itemName, itemPrice) {
             Pi.createPayment({
                 amount: itemPrice,
-                memo: "شراء/Buy/کڕین: " + itemName,
+                memo: "شراء مضمون لجهاز " + itemName + " - ABU SERAJ PHONE",
             }, {
-                onReadyForServerApproval: function(paymentId) {
-                    alert("🛡️ تم تجميد المبلغ للضمان / Payment Escrowed / پارەکە لە سیستمەکە گیراوە");
-                },
-                onReadyForServerCompletion: function(paymentId, txid) {
-                    alert("🎉 تم الدفع بنجاح / Paid Successfully / بە سەرکەوتوویی کڕدرا");
-                }
+                onReadyForServerApproval: function(paymentId) { alert("🛡️ تم تجميد المبلغ للضمان."); },
+                onReadyForServerCompletion: function(paymentId, txid) { alert("🎉 تم تأكيد الدفع بنجاح."); }
             });
         }
     </script>
